@@ -1,6 +1,8 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-
 export const Home = () => {
+  const handleOpenPdf = () => {
+    window.open("/murad-usman.pdf", "_blank");
+  };
   return (
     <section
       id="home"
@@ -14,8 +16,7 @@ export const Home = () => {
 
           <p className="tex-gray-400 text-lg mb-8 max-w-lg mx-auto">
             A Backend Engineer and System Engineer with extensive experience in
-            designing, developing, and optimizing scalable backend systems. Over
-            the years,
+            designing, developing, and optimizing scalable backend systems.
           </p>
           <div className="flex justify-center space-x-4">
             <a
@@ -26,11 +27,11 @@ export const Home = () => {
             </a>
 
             <a
-              href="#contact"
+              onClick={handleOpenPdf}
               className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 
              hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10"
             >
-              Contact Me
+              Download Resume
             </a>
           </div>
         </div>
