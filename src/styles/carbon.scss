@@ -1,0 +1,14 @@
+@use "@carbon/react/scss/config" with (
+  $font-path: "@ibm/plex"
+);
+@use "@carbon/react/scss/themes";
+@use "@carbon/react/scss/theme" with (
+  $theme: themes.$g100
+);
+// Plex Serif is never used by this site, so keep it out of the bundle.
+@use "@carbon/styles/scss/fonts" with (
+  $fonts: (
+    IBM-Plex-Serif: false,
+  )
+);
+@use "@carbon/react";

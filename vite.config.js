@@ -6,4 +6,13 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "",
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+        loadPaths: ["node_modules"],
+        quietDeps: true,
+      },
+    },
+  },
 });

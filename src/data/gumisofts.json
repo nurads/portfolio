@@ -1,0 +1,279 @@
+[
+  {
+    "slug": "bita-business-application",
+    "title": "Bita Business application",
+    "tagline": "Inventory & Sales Management Made Simple",
+    "description": "Bita is a comprehensive business management platform built to help Ethiopian businesses digitize their operations. It combines Point of Sale, Inventory Management, Sales, CRM, Financial Management, and Business Analytics into a single integrated system",
+    "category": "Mobile app",
+    "technologies": [
+      "Firebase",
+      "Flutter",
+      "PostegreSQL"
+    ],
+    "features": [
+      "Point of Sale (POS)",
+      "Inventory Management",
+      "Sales Management",
+      "Customer Relationship Management",
+      "Financial Management",
+      "Analytics & Reporting",
+      "Multi-Branch Operations"
+    ],
+    "problem": "Small and medium-sized businesses in Ethiopia often rely on paper records, spreadsheets, or disconnected software to manage daily operations. As businesses grow, they struggle with inventory inaccuracies, inefficient sales processes, inconsistent financial records, and limited visibility into business performance. Existing enterprise solutions are frequently too expensive, overly complex, or not designed for the Ethiopian market.",
+    "problemPoints": [
+      "Manual inventory tracking leading to stock discrepancies.",
+      "Difficulty monitoring sales across multiple branches.",
+      "Time-consuming invoice and receipt generation.",
+      "Lack of centralized customer and supplier management.",
+      "Poor visibility into business performance and profitability.",
+      "Human errors caused by paper-based processes.",
+      "Limited support for Ethiopian business workflows.",
+      "Inefficient employee and user permission management.",
+      "Slow checkout process in retail environments.",
+      "No reliable audit trail for business activities."
+    ],
+    "solution": "Gumisofts designed and developed Bita as an end-to-end business management solution that addresses the operational challenges faced by growing businesses. By consolidating multiple business functions into one unified platform, Bita enables organizations to automate routine processes, improve operational accuracy, and gain complete visibility across their operations.",
+    "solutionPoints": [
+      "Real-time inventory management with automatic stock updates.",
+      "Multi-branch support with centralized administration.",
+      "Automated invoice and receipt generation.",
+      "Integrated CRM for customers, suppliers, and contacts.",
+      "Interactive dashboards with real-time analytics and KPIs.",
+      "Automated workflows and validation rules.",
+      "Role-based access control for employees.",
+      "Sales, payment, credit, and reconciliation management.",
+      "Unified platform combining POS, inventory, finance, and CRM.",
+      "Fast Point-of-Sale system optimized for retail environments."
+    ],
+    "image": "projects/gumisofts/bita-business-application-cover.webp",
+    "screenshots": [
+      "projects/gumisofts/bita-business-application-1.webp",
+      "projects/gumisofts/bita-business-application-2.webp",
+      "projects/gumisofts/bita-business-application-3.webp",
+      "projects/gumisofts/bita-business-application-4.webp",
+      "projects/gumisofts/bita-business-application-5.webp",
+      "projects/gumisofts/bita-business-application-6.webp"
+    ],
+    "demoUrl": "https://play.google.com/store/apps/details?id=com.gumisofts.bita",
+    "githubUrl": null,
+    "isFeatured": true,
+    "order": 0
+  },
+  {
+    "slug": "savana-online-marketplace",
+    "title": "Savana Online Marketplace",
+    "tagline": "Connecting Buyers with Trusted Suppliers.",
+    "description": "Savana Marketplace is a B2B e-commerce marketplace platform based on East Africa and Ethiopia that connects buyer and seller and ensures buyer-seller transactions, trust, and reliability.",
+    "category": "Web App & Mobile App",
+    "technologies": [
+      "React",
+      "Python",
+      "Django",
+      "Nextjs",
+      "PostgreSQL"
+    ],
+    "features": [
+      "Smart Product Search",
+      "Digital Order Management",
+      "Business Profiles",
+      "Supplier Marketplace",
+      "seller dashboard management",
+      "In-App Business Messaging"
+    ],
+    "problem": "Ethiopia's B2B Trade Is Still Highly Fragmented\r\nDespite rapid digital adoption, a large portion of business procurement in Ethiopia still relies on traditional methods such as:\r\n- Phone calls\r\n- Telegram groups\r\n- Facebook posts\r\n- Word-of-mouth referrals\r\n- Physical market visits\r\n- Personal business networks\r\nThis creates several challenges for buyers and suppliers alike.",
+    "problemPoints": [
+      "Poor Digital Presence for SMEs",
+      "Manual Order Management",
+      "Limited Trust Between Buyers and Suppliers",
+      "Fragmented Communication",
+      "Lack of Price Transparency",
+      "Time-Consuming Procurement",
+      "Limited Supplier Visibility"
+    ],
+    "solution": "Savana introduces a unified B2B marketplace that digitizes procurement from discovery to order placement.",
+    "solutionPoints": [
+      "Smart Product Discovery",
+      "Verified Supplier Profiles",
+      "Centralized Product Catalog",
+      "Integrated Messaging",
+      "Digital Cart & Order Management",
+      "Supplier Dashboard Management",
+      "Mobile-First Experience"
+    ],
+    "image": "projects/gumisofts/savana-online-marketplace-cover.webp",
+    "screenshots": [
+      "projects/gumisofts/savana-online-marketplace-1.webp",
+      "projects/gumisofts/savana-online-marketplace-2.webp",
+      "projects/gumisofts/savana-online-marketplace-3.webp",
+      "projects/gumisofts/savana-online-marketplace-4.webp",
+      "projects/gumisofts/savana-online-marketplace-5.webp",
+      "projects/gumisofts/savana-online-marketplace-6.webp"
+    ],
+    "demoUrl": "https://savana.et/",
+    "githubUrl": null,
+    "isFeatured": true,
+    "order": 0
+  },
+  {
+    "slug": "entrance-tricks-grade-9-12",
+    "title": "Entrance Tricks Grade 9 - 12",
+    "tagline": "",
+    "description": "Are you preparing for university entrance exams or looking to ace your school tests? Entrance Tricks is designed to help you study smarter, not harder. We break down complex subjects into easy-to-remember \"tricks\" and provide structured paths to academic success.",
+    "category": "Mobile app",
+    "technologies": [
+      "Flutter",
+      "Firebase"
+    ],
+    "features": [
+      "Competitive Leaderboard",
+      "Education News Portal",
+      "Multimedia Learning",
+      "Offline Learning",
+      "Subscription Plans",
+      "Study Planner",
+      "Learning Progress Tracking",
+      "Exam Categories"
+    ],
+    "problem": "Ethiopian students face significant barriers in preparing for national entrance examinations.\r\nEvery year, hundreds of thousands of Grade 9–12 students compete for limited university placements.",
+    "problemPoints": [
+      "Limited Access to Quality Learning Materials",
+      "Lack of Real Exam Practice",
+      "Poor Progress Tracking",
+      "Limited Offline Learning",
+      "No Personalized Learning Journey",
+      "Delayed Educational Updates",
+      "Lack of Motivation"
+    ],
+    "solution": "Entrance Tricks grade 9 - 12  brings everything students need into one mobile application.",
+    "solutionPoints": [
+      "Interactive Chapter Learning",
+      "Real Entrance Exam Simulation",
+      "Performance Analytics",
+      "Leaderboard & Gamification",
+      "Offline Learning",
+      "Educational News Center",
+      "Flexible Learning Plans"
+    ],
+    "image": "projects/gumisofts/entrance-tricks-grade-9-12-cover.webp",
+    "screenshots": [
+      "projects/gumisofts/entrance-tricks-grade-9-12-1.webp",
+      "projects/gumisofts/entrance-tricks-grade-9-12-2.webp",
+      "projects/gumisofts/entrance-tricks-grade-9-12-3.webp",
+      "projects/gumisofts/entrance-tricks-grade-9-12-4.webp",
+      "projects/gumisofts/entrance-tricks-grade-9-12-5.webp",
+      "projects/gumisofts/entrance-tricks-grade-9-12-6.webp",
+      "projects/gumisofts/entrance-tricks-grade-9-12-7.webp"
+    ],
+    "demoUrl": "https://play.google.com/store/apps/details?id=com.vector_academy.app",
+    "githubUrl": null,
+    "isFeatured": true,
+    "order": 1
+  },
+  {
+    "slug": "temarico-national-exam-prep",
+    "title": "TemariCo – National Exam Prep",
+    "tagline": "",
+    "description": "We developed TemariCo, a collaborative platform designed to help high school students across Ethiopia succeed in their entrance exams.",
+    "category": "Education",
+    "technologies": [
+      "Flutter",
+      "Firebase"
+    ],
+    "features": [
+      "Practice exams with instant scoring",
+      "Chapter-based revision plans",
+      "Student progress analytics dashboard",
+      "Subject-Based Learning",
+      "Previous Entrance Exams",
+      "Quiz Library",
+      "Pricing Plan"
+    ],
+    "problem": "Many Ethiopian high school students, especially those in rural areas, have limited access to quality textbooks, exam preparation materials, video lessons, and experienced teachers. Educational resources are often outdated or difficult to obtain.\r\nUniversity entrance exams are highly competitive, yet many students prepare without a clear study plan or sufficient practice tests. Students often study alone and have limited opportunities to discuss difficult topics, ask questions, or learn from peers.",
+    "problemPoints": [
+      "Limited Access to High-Quality Learning Resources",
+      "Lack of Structured Entrance Exam Preparation",
+      "Poor Student Collaboration",
+      "Limited Teacher-Student Interaction Outside School",
+      "Lack of Personalized Learning",
+      "Difficulty Tracking Academic Progress",
+      "Financial Barriers to Private Tutoring"
+    ],
+    "solution": "TemariCo is a collaborative digital learning platform that empowers Ethiopian high school students with curriculum-aligned study materials, interactive learning, peer collaboration, mock examinations, personalized progress tracking, and mentorship—helping every student prepare confidently and perform better in university entrance exams.",
+    "solutionPoints": [
+      "Centralized digital learning platform",
+      "Curriculum-aligned study materials",
+      "Video lessons and interactive content",
+      "Comprehensive entrance exam preparation",
+      "Subject-specific learning paths",
+      "Timed practice tests",
+      "Personalized study recommendations",
+      "Progress monitoring"
+    ],
+    "image": "projects/gumisofts/temarico-national-exam-prep-cover.webp",
+    "screenshots": [
+      "projects/gumisofts/temarico-national-exam-prep-1.webp",
+      "projects/gumisofts/temarico-national-exam-prep-2.webp",
+      "projects/gumisofts/temarico-national-exam-prep-3.webp",
+      "projects/gumisofts/temarico-national-exam-prep-4.webp",
+      "projects/gumisofts/temarico-national-exam-prep-5.webp",
+      "projects/gumisofts/temarico-national-exam-prep-6.webp",
+      "projects/gumisofts/temarico-national-exam-prep-7.webp"
+    ],
+    "demoUrl": "https://play.google.com/store/apps/details?id=com.temarico.app",
+    "githubUrl": null,
+    "isFeatured": true,
+    "order": 2
+  },
+  {
+    "slug": "aderotech-digital-solutions",
+    "title": "AderoTech – Digital Solutions",
+    "tagline": "",
+    "description": "We developed AderooTech's website to provide a seamless, modern platform that supports their mission of simplifying lives through digital solutions.",
+    "category": "Web",
+    "technologies": [
+      "Next.js",
+      "Tailwind"
+    ],
+    "features": [
+      "Modern marketing pages",
+      "Lead-focused conversion sections",
+      "Fast and mobile-first user experience"
+    ],
+    "problem": "",
+    "problemPoints": [],
+    "solution": "",
+    "solutionPoints": [],
+    "image": null,
+    "screenshots": [],
+    "demoUrl": "https://www.adero.tech/",
+    "githubUrl": null,
+    "isFeatured": true,
+    "order": 3
+  },
+  {
+    "slug": "dabbaal-tour-and-travels",
+    "title": "Dabbaal – Tour and Travels",
+    "tagline": "",
+    "description": "We developed a website for Dabbal Tour and Travel PLC, a leading tour service provider in Ethiopia.",
+    "category": "Web",
+    "technologies": [
+      "React",
+      "Node.js"
+    ],
+    "features": [
+      "Tour package highlights",
+      "Online inquiry and booking flow",
+      "Destination content management"
+    ],
+    "problem": "",
+    "problemPoints": [],
+    "solution": "",
+    "solutionPoints": [],
+    "image": null,
+    "screenshots": [],
+    "demoUrl": "https://dabbaaltourandtravel.com/",
+    "githubUrl": null,
+    "isFeatured": true,
+    "order": 4
+  }
+]

@@ -1,13 +1,11 @@
 import { useState } from "react";
-import "./App.css";
+import { Content, Theme } from "@carbon/react";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
-import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { GitHubStats } from "./components/sections/GitHubStats";
-import "./index.css";
 import { Contact } from "./components/sections/Contact";
 
 function App() {
@@ -15,24 +13,19 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
-      <div
-        className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        } bg-black text-gray-100`}
-      >
+    <Theme theme="g100">
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+      <div className={`app${isLoaded ? " app--ready" : ""}`}>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <main className="relative">
+        <Content id="main-content" className="app__content">
           <Home />
           <About />
           <Projects />
           <GitHubStats />
           <Contact />
-        </main>
+        </Content>
       </div>
-    </>
+    </Theme>
   );
 }
 

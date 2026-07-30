@@ -1,0 +1,240 @@
+%-------------------------
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+\usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%     \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+  \textbf{\Huge \scshape Murad Usman} \\ \vspace{1pt}
+  \small \href{tel:+251928808587}{\underline{+251928808587}} $|$ \href{mailto:nuradhussen082@gmail.com}{\underline{nuradhussen082@gmail.com}} $|$
+  \href{https://linkedin.com/in/murad-usman}{\underline{LinkedIn}} $|$
+  \href{https://github.com/nurads}{\underline{GitHub}} $|$
+  \href{https://murad-usman.dev}{\underline{Portfolio}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Adama Science and Technology University}{Adama, Ethiopia}
+{Bachelor of Science in Software Engineering}{}
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Backend Engineer}{Jul. 2026 -- Present}
+{Ideeza}{Remote}
+\resumeItemListStart
+\resumeItem{Develop enterprise financial and accounting systems with Django and PostgreSQL, including double-entry accounting, payroll, and multi-currency finance modules.}
+\resumeItem{Design scalable REST APIs and asynchronous processing pipelines using Celery and Redis.}
+\resumeItem{Improve backend performance through database optimization, caching, and infrastructure tuning.}
+\resumeItem{Collaborate with frontend and DevOps teams to deliver production-ready enterprise features.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Senior Software Engineer}{Feb. 2025 -- Present}
+{\href{https://www.linkedin.com/company/gumisofts}{\underline{Gumisofts}}}{Remote (Part-time)}
+\resumeItemListStart
+\resumeItem{Architect backend systems for SaaS and fintech products using Django and FastAPI, and design AWS infrastructure (EC2, RDS, S3, CloudFront, ECS).}
+\resumeItem{Build payment gateway integrations, ERP solutions, and merchant management platforms for commercial clients.}
+\resumeItem{Lead technical architecture decisions and code reviews; mentor a team of engineers and interns.}
+\resumeItem{Develop AI-powered product features and CI/CD pipelines with GitHub Actions, cutting deployment time from hours to minutes.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Backend Software Engineer}{Sep. 2024 -- Feb. 2025}
+{\href{https://www.linkedin.com/company/azcareai/}{\underline{AzCare}}}{San Jose, California (Remote)}
+\resumeItemListStart
+\resumeItem{Engineered high-performance web scraping systems processing 1M+ data points daily from healthcare sources.}
+\resumeItem{Architected scalable AWS S3 data storage solutions with 99.9\% uptime and optimized retrieval performance.}
+\resumeItem{Developed RESTful APIs with FastAPI serving real-time healthcare data to 500+ concurrent users.}
+\resumeItem{Implemented automated data pipeline workflows, reducing manual processing time by 80\%.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Full Stack Software Engineer}{June 2021 -- Sep. 2024}
+{\href{https://www.linkedin.com/company/syntaxen-software/}{\underline{Syntaxen Software}}}{Addis Ababa, Ethiopia}
+\resumeItemListStart
+\resumeItem{Built and published multiple production mobile applications using Django, React Native, and Flutter to the Google Play Store.}
+\resumeItem{Designed AWS deployment infrastructure and automated provisioning with Docker and Ansible.}
+\resumeItem{Implemented secure authentication with AWS Cognito and multiple data-pipelining systems.}
+\resumeItem{Led development teams and mentored interns; established CI/CD pipelines to streamline releases.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Engineer Intern}{July 2020 -- Sep. 2020}
+{\href{https://www.linkedin.com/company/syntaxen-software/}{\underline{Syntaxen Software}}}{Addis Ababa, Ethiopia}
+\resumeItemListStart
+\resumeItem{Developed scripts to parse scientific documents from TeX into a structured database.}
+\resumeItem{Created REST APIs to facilitate efficient data collection and management.}
+\resumeItem{Built backend APIs for educational platforms using Django, improving content accessibility.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{\href{https://cribcrm.com}{\underline{CribCRM}}} $|$ \emph{React, Fastify, PostgreSQL, OpenAI, Stripe}}{2026}
+\resumeItemListStart
+\resumeItem{Integrated an OpenAI-powered chat assistant into CribCRM's web and mobile apps (iOS \& Android), giving members conversational access to the platform.}
+\resumeItem{Connected the assistant to CRM context so it can summarize leads and draft follow-ups automatically.}
+\resumeItem{Shipped the feature across web, iOS, and Android within CribCRM's existing Stripe-based billing platform.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://play.google.com/store/apps/details?id=com.gumisofts.bita}{\underline{Bita Business}}} $|$ \emph{Python, Django, PostgreSQL, Redis, Celery, Docker, AWS}}{2024 -- Present}
+\resumeItemListStart
+\resumeItem{Designed a multi-tenant SaaS backend for POS, inventory, CRM, accounting, and billing serving Ethiopian businesses.}
+\resumeItem{Built role-based REST APIs and optimized PostgreSQL queries with Celery and Redis for background processing and caching.}
+\resumeItem{Implemented inventory, supplier, sales, and financial reporting modules with SMS notifications and subscription billing.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://savana.et}{\underline{Savana Online Marketplace}}} $|$ \emph{React, Next.js, Django, PostgreSQL}}{2024}
+\resumeItemListStart
+\resumeItem{Built the backend for a B2B marketplace connecting buyers and verified suppliers across East Africa.}
+\resumeItem{Implemented product catalog, order management, and in-app messaging APIs with Django and PostgreSQL.}
+\resumeItem{Designed a supplier dashboard and mobile-first storefront experience with React and Next.js.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://play.google.com/store/apps/details?id=com.temarico.app}{\underline{TemariCo Mobile}}} $|$ \emph{Flutter, Dart, Django, Firebase, AWS}}{Aug. 2021 -- 2022}
+\resumeItemListStart
+\resumeItem{Built a cross-platform exam-prep app in Flutter serving Ethiopian high school students on Android and iOS.}
+\resumeItem{Designed the Django backend, secure authentication, and progress-tracking APIs behind the app.}
+\resumeItem{Deployed and maintained the app on the Play Store, integrating quizzes and analytics.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/gumisofts/gisila}{\underline{Gisila}}} $|$ \emph{Dart, PostgreSQL, MySQL, SQLite}}{Apr. 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Built an open-source Dart ORM supporting PostgreSQL, MySQL, and SQLite with a type-safe query builder.}
+\resumeItem{Designed a schema/migration system and code-generation engine to automate repetitive database code.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Frontend}{: React, Next.js, TypeScript, JavaScript, TailwindCSS, Flutter, Dart, HTML/CSS} \\
+        \textbf{Backend}{: Python, Django, FastAPI, Node.js, PostgreSQL, MySQL, MongoDB, Redis, GraphQL, OpenAI API} \\
+        \textbf{DevOps \& Tools}{: AWS (EC2, S3, Lambda, Cognito), Google Cloud Platform, Docker, GitHub Actions, Ansible, Git, CI/CD}
+        }}
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}

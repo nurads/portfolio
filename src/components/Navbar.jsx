@@ -1,57 +1,134 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import {
+  Header,
+  HeaderGlobalAction,
+  HeaderGlobalBar,
+  HeaderMenuButton,
+  HeaderMenuItem,
+  HeaderName,
+  HeaderNavigation,
+  SideNav,
+  SideNavItems,
+  SideNavLink,
+  SkipToContent,
+} from "@carbon/react";
+import { Document, LogoGithub, LogoLinkedin } from "@carbon/icons-react";
+
+const SECTIONS = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
+
+/** Highlights the nav item for whichever section currently owns the viewport. */
+const useActiveSection = () => {
+  const [active, setActive] = useState(SECTIONS[0].id);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(visible.target.id);
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: [0, 0.25, 0.5, 1] }
+    );
+
+    for (const { id } of SECTIONS) {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return active;
+};
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
+  const active = useActiveSection();
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
+
+  const close = () => setMenuOpen(false);
+
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-mono text-xl font-bold text-white">
-            {" "}
-            Murad<span className="text-blue-500"> Usman</span>{" "}
-          </a>
+    <Header aria-label="Murad Usman portfolio">
+      <SkipToContent />
+      {/* isCollapsible is misleadingly named: passing it stops Carbon from
+          hiding the button at the lg breakpoint, so it would show even
+          alongside the desktop HeaderNavigation. Omitting it keeps this
+          mobile-only, as intended. */}
+      <HeaderMenuButton
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        isActive={menuOpen}
+        onClick={() => setMenuOpen((previous) => !previous)}
+      />
+      <HeaderName href="#home" prefix="Murad">
+        Usman
+      </HeaderName>
 
-          <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
-            onClick={() => setMenuOpen((prev) => !prev)}
+      <HeaderNavigation aria-label="Sections">
+        {SECTIONS.map(({ id, label }) => (
+          <HeaderMenuItem
+            key={id}
+            href={`#${id}`}
+            isCurrentPage={active === id}
           >
-            &#9776;
-          </div>
+            {label}
+          </HeaderMenuItem>
+        ))}
+      </HeaderNavigation>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#home"
-              className="text-gray-300 hove:text-white transition-colors"
+      <HeaderGlobalBar>
+        <HeaderGlobalAction
+          aria-label="Resume"
+          tooltipAlignment="end"
+          onClick={() => window.open("/murad-usman.pdf", "_blank")}
+        >
+          <Document size={20} />
+        </HeaderGlobalAction>
+        <HeaderGlobalAction
+          aria-label="GitHub"
+          tooltipAlignment="end"
+          onClick={() => window.open("https://github.com/nurads", "_blank")}
+        >
+          <LogoGithub size={20} />
+        </HeaderGlobalAction>
+        <HeaderGlobalAction
+          aria-label="LinkedIn"
+          tooltipAlignment="end"
+          onClick={() =>
+            window.open("https://linkedin.com/in/murad-usman", "_blank")
+          }
+        >
+          <LogoLinkedin size={20} />
+        </HeaderGlobalAction>
+      </HeaderGlobalBar>
+
+      <SideNav
+        aria-label="Section navigation"
+        expanded={menuOpen}
+        isPersistent={false}
+        onOverlayClick={close}
+      >
+        <SideNavItems>
+          {SECTIONS.map(({ id, label }) => (
+            <SideNavLink
+              key={id}
+              href={`#${id}`}
+              isActive={active === id}
+              onClick={close}
             >
-              {" "}
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-gray-300 hove:text-white transition-colors"
-            >
-              {" "}
-              About{" "}
-            </a>
-            <a
-              href="#projects"
-              className="text-gray-300 hove:text-white transition-colors"
-            > 
-              {" "}
-              Projects{" "}
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-300 hove:text-white transition-colors"
-            >
-              {" "}
-              Contact{" "}
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+              {label}
+            </SideNavLink>
+          ))}
+        </SideNavItems>
+      </SideNav>
+    </Header>
   );
 };

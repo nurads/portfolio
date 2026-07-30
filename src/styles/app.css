@@ -1,0 +1,730 @@
+/*
+ * Site-specific styles. Loaded after Carbon (see src/main.jsx) so these win
+ * over framework defaults without needing specificity hacks.
+ */
+
+/*
+ * Carbon compiles every theme token to a CSS custom property, so repointing the
+ * interactive ones here re-skins the framework and this file at once — no need
+ * to fork the Sass theme map. Warm amber replaces the stock IBM blue, which
+ * reads as "enterprise product" rather than portfolio.
+ *
+ * Amber on near-black clears WCAG AA comfortably; the primary button pairs the
+ * darker orange-50 with near-black text for the same reason.
+ */
+.cds--g100 {
+  --cds-interactive: #ff832b;
+  --cds-link-primary: #ff832b;
+  --cds-link-primary-hover: #ffb784;
+  --cds-link-visited: #ffb784;
+  --cds-link-inverse: #eb6200;
+  --cds-border-interactive: #ff832b;
+  --cds-focus: #ffb784;
+  --cds-button-primary: #eb6200;
+  --cds-button-primary-hover: #ff832b;
+  --cds-button-primary-active: #8a3800;
+  --cds-support-info: #ff832b;
+}
+
+.app {
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.app--ready {
+  opacity: 1;
+}
+
+/* Sections own the vertical rhythm; keep Carbon's horizontal page margin so
+   content lines up with the shell header. */
+.app__content {
+  padding-block: 0;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 42rem) {
+  .app__content {
+    padding-inline: 2rem;
+  }
+}
+
+/* ---------------------------------------------------------------- sections */
+
+.section {
+  padding-block: 6rem;
+  border-block-start: 1px solid var(--cds-border-subtle-01);
+}
+
+.section:first-child {
+  border-block-start: none;
+}
+
+/*
+ * Alternating bands break the page into distinct stops instead of one
+ * uninterrupted dark scroll. The negative inline margin cancels the padding on
+ * .app__content so the tint runs edge to edge while the text stays aligned with
+ * every other section. Banded sections also carry .cds--layer-two, which lifts
+ * the tiles inside them a step so they don't vanish into the tint.
+ */
+.section--band {
+  margin-inline: -1rem;
+  padding-inline: 1rem;
+  background: var(--cds-layer-01);
+}
+
+@media (min-width: 42rem) {
+  .section--band {
+    margin-inline: -2rem;
+    padding-inline: 2rem;
+  }
+}
+
+.section__grid {
+  row-gap: 2rem;
+}
+
+.section__eyebrow {
+  margin-block-end: 0.5rem;
+  color: var(--cds-text-helper);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.section__title {
+  margin-block-end: 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.section__lede {
+  max-width: 44rem;
+  color: var(--cds-text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.section__subtitle {
+  margin-block-end: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+/* -------------------------------------------------------------------- home */
+
+/* svh rather than vh so mobile browser chrome doesn't push the stats out of
+   the first screen. */
+.section--home {
+  display: flex;
+  min-height: calc(100svh - 3rem);
+  align-items: center;
+  padding-block: 4rem;
+}
+
+/* The reveal wrapper is a flex item here, so without this it shrinks to fit
+   its text and the grid never spans the full width. */
+.section--home > .reveal {
+  flex: 1;
+  min-width: 0;
+}
+
+.home__name {
+  margin-block-end: 1rem;
+  font-size: clamp(2.5rem, 8vw, 4.75rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.home__role {
+  display: inline-block;
+  margin-block-end: 1.5rem;
+  border-inline-start: 2px solid var(--cds-interactive);
+  padding-inline-start: 0.75rem;
+  color: var(--cds-text-secondary);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.home__lede {
+  max-width: 36rem;
+  margin-block-end: 2.5rem;
+  color: var(--cds-text-secondary);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.home__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.home__stats {
+  display: grid;
+  border-block-start: 1px solid var(--cds-border-subtle-01);
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-block-start: 3rem;
+}
+
+.home__stat {
+  padding-block-start: 1.5rem;
+}
+
+.home__stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.home__stat-label {
+  color: var(--cds-text-helper);
+  font-size: 0.75rem;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.home__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.home__current {
+  padding: 1.5rem;
+}
+
+.home__current-label {
+  margin-block-end: 1rem;
+  color: var(--cds-text-helper);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.home__current-title {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.home__current-company {
+  margin-block-start: 0.25rem;
+  color: var(--cds-text-secondary);
+}
+
+.home__current-since {
+  margin-block-start: 0.5rem;
+  color: var(--cds-text-helper);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+}
+
+.home__current-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-start: 1.25rem;
+  gap: 0.25rem;
+}
+
+/* Only meaningful on the tall two-column hero; below lg the page already
+   stacks and the next section is the obvious next thing. */
+.home__scroll-link {
+  display: none;
+}
+
+@media (min-width: 66rem) {
+  .home__scroll-link {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    border: 1px solid var(--cds-border-subtle-01);
+    color: var(--cds-text-secondary);
+    transition: background 110ms, color 110ms;
+  }
+
+  .home__scroll-link:hover {
+    background: var(--cds-layer-01);
+    color: var(--cds-text-primary);
+  }
+}
+
+/* ---------------------------------------------------------------- projects */
+
+.projects__filter {
+  margin-block: 1rem 1rem;
+}
+
+.projects__filter .cds--content-switcher {
+  max-width: 32rem;
+}
+
+.projects__column {
+  margin-block-end: 2rem;
+}
+
+.project-tile {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 0;
+}
+
+/*
+ * Covers are a mix of landscape mockups and portrait phone screenshots. Cropping
+ * the tall ones to 16:9 would leave a useless sliver, but containing them on a
+ * flat grey left every tile a bright island in a dead frame. Instead the cover
+ * doubles as its own backdrop: scaled to fill, then blurred and dimmed behind
+ * the sharp contained copy, so each tile picks up the project's real colour.
+ */
+.project-tile__media {
+  position: relative;
+  overflow: hidden;
+  border-block-end: 1px solid var(--cds-border-subtle-01);
+  aspect-ratio: 16 / 9;
+  background-color: var(--cds-layer-02);
+  background-position: center;
+  background-size: cover;
+}
+
+.project-tile__media::after {
+  position: absolute;
+  background: rgb(22 22 22 / 55%);
+  backdrop-filter: blur(24px) saturate(160%);
+  content: "";
+  inset: 0;
+}
+
+.project-tile__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem;
+  object-fit: contain;
+  transition: transform 240ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.project-tile:hover .project-tile__image {
+  transform: scale(1.03);
+}
+
+.project-tile__body {
+  flex: 1;
+  padding: 1.5rem 1rem 1rem;
+}
+
+.project-tile__title {
+  margin-block-end: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.project-tile__tagline {
+  margin-block-end: 1rem;
+  color: var(--cds-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.project-tile__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.project-tile__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--cds-link-primary);
+  font-size: 0.875rem;
+}
+
+/* ------------------------------------------------------------- case study */
+
+.case-study .cds--modal-content {
+  padding-inline-end: 1rem;
+}
+
+.case-study__tagline {
+  margin-block-end: 1rem;
+  color: var(--cds-text-secondary);
+  font-size: 1.125rem;
+}
+
+.case-study__tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: 1.5rem;
+  gap: 0.25rem;
+}
+
+.case-study__section {
+  margin-block-start: 2rem;
+}
+
+.case-study__section:first-child {
+  margin-block-start: 0;
+}
+
+.case-study__heading {
+  margin-block-end: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.case-study__body {
+  max-width: 46rem;
+  color: var(--cds-text-secondary);
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.case-study__list {
+  margin-block-start: 1rem;
+  color: var(--cds-text-secondary);
+}
+
+.case-study__list li {
+  margin-block-end: 0.25rem;
+}
+
+.case-study .cds--tab-content {
+  padding-block: 1.5rem;
+}
+
+/* Screenshots are mostly portrait, so cap the height to keep the thumbnail
+   strip in view instead of letting one image fill the whole modal. */
+.case-study__gallery-main {
+  display: block;
+  width: 100%;
+  max-height: 22rem;
+  border: 1px solid var(--cds-border-subtle-01);
+  background: var(--cds-layer-01);
+  object-fit: contain;
+}
+
+.case-study__thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-start: 0.5rem;
+  gap: 0.5rem;
+}
+
+.case-study__thumb {
+  width: 5rem;
+  height: 3.5rem;
+  border: 1px solid var(--cds-border-subtle-01);
+  background: var(--cds-layer-01);
+  cursor: pointer;
+  padding: 0;
+}
+
+.case-study__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-study__thumb--active {
+  border-color: var(--cds-interactive);
+  outline: 1px solid var(--cds-interactive);
+}
+
+.case-study__thumb:focus-visible {
+  outline: 2px solid var(--cds-focus);
+  outline-offset: 1px;
+}
+
+.case-study__actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-start: 2rem;
+  gap: 1px;
+}
+
+/* ------------------------------------------------------------------- about */
+
+.about__panel {
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.about__panel-title {
+  margin-block-end: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.about__timeline {
+  border-inline-start: 1px solid var(--cds-border-subtle-01);
+  padding-inline-start: 1.5rem;
+}
+
+.about__role {
+  position: relative;
+  padding-block-end: 2.5rem;
+}
+
+.about__role::before {
+  position: absolute;
+  top: 0.4rem;
+  left: calc(-1.5rem - 4px);
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: var(--cds-interactive);
+  content: "";
+}
+
+.about__role:last-child {
+  padding-block-end: 0;
+}
+
+.about__role-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-block-end: 0.75rem;
+  gap: 0.5rem;
+}
+
+.about__role-title {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.about__role-company {
+  color: var(--cds-text-secondary);
+  font-size: 0.875rem;
+}
+
+.about__role-dates {
+  color: var(--cds-text-helper);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.about__role-list {
+  margin-block-end: 1rem;
+  color: var(--cds-text-secondary);
+  font-size: 0.875rem;
+}
+
+.about__role-list li {
+  margin-block-end: 0.25rem;
+}
+
+/* ----------------------------------------------------------------- contact */
+
+.contact__form {
+  max-width: 36rem;
+}
+
+.contact__field {
+  margin-block-end: 1.5rem;
+}
+
+.contact__links {
+  display: grid;
+  gap: 1px;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-block-end: 1px solid var(--cds-border-subtle-01);
+  padding-block: 1rem;
+  color: var(--cds-link-primary);
+  text-decoration: none;
+}
+
+.contact__link:hover {
+  color: var(--cds-link-primary-hover);
+}
+
+/* --------------------------------------------------------------- gh stats */
+
+.stats__tile {
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.stats__value {
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.stats__label {
+  color: var(--cds-text-helper);
+  font-size: 0.75rem;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+/* A full year never fits on a phone, so let it scroll inside the tile rather
+   than pushing the whole page wider. */
+.stats__calendar-scroll {
+  overflow-x: auto;
+  margin-block: 1rem;
+  padding-block-end: 0.5rem;
+}
+
+/* 53 weeks across, one column per week, filled top-to-bottom by day. */
+.stats__calendar {
+  display: grid;
+  min-width: 30rem;
+  gap: 2px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, 1fr);
+}
+
+.stats__cell {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.stats__legend {
+  display: flex;
+  align-items: center;
+  color: var(--cds-text-helper);
+  font-size: 0.75rem;
+  gap: 4px;
+}
+
+.stats__legend .stats__cell {
+  width: 10px;
+  flex: none;
+}
+
+.stats__language + .stats__language {
+  margin-block-start: 1rem;
+}
+
+.stats__language-row {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.stats__bar {
+  height: 4px;
+  background: var(--cds-layer-02);
+}
+
+.stats__bar-fill {
+  height: 100%;
+  background: var(--cds-interactive);
+  transition: width 500ms ease;
+}
+
+.stats__repo-link {
+  color: var(--cds-link-primary);
+  text-decoration: none;
+}
+
+.stats__repo-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------- loading screen */
+
+.loading-screen {
+  position: fixed;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cds-background);
+  inset: 0;
+}
+
+/*
+ * The text shrinks to fit its typed-out content, which is narrower than the
+ * spinner's block-level default while typing. Centering this wrapper as a flex
+ * column keeps the spinner under the middle of the text at every frame instead
+ * of under its left edge.
+ */
+.loading-screen__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-screen__text {
+  margin-block-end: 1.5rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  /* min-width is set inline from the full string length so the spinner
+     doesn't drift as characters type in. */
+  text-align: center;
+}
+
+/* ------------------------------------------------------------- transitions */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 0.8s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
